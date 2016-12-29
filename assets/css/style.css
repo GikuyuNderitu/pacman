@@ -4,7 +4,7 @@
   background: #000; }
 
 #container > * {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0; }
 
@@ -29,7 +29,63 @@
   background: url("../img/coin.gif") no-repeat center; }
 
 #pacman {
+  position: absolute;
   height: 20px;
   width: 20px;
   background: url("../img/pacman.gif") no-repeat center;
   background-size: cover; }
+
+#score {
+  height: 20px;
+  width: 40px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  color: white; }
+
+#cherry {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: url("../img/cherry.gif") no-repeat center;
+  background-size: cover; }
+
+.floating {
+  -webkit-animation: Floating 2s infinite;
+  animation: Floating 2s infinite; }
+
+.look-down {
+  -webkit-transform: rotateZ(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotateZ(90deg); }
+
+.look-up {
+  -webkit-transform: rotateZ(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotateZ(-90deg); }
+
+.look-left {
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotateZ(180deg); }
+
+@-webkit-keyframes Floating {
+  0% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); } }
+
+@keyframes Floating {
+  0% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); } }
