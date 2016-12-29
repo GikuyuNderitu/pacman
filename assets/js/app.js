@@ -1,5 +1,7 @@
 'use strict'
 const PacWorld = function(){
+	// TODO: Add ghost objects (parent object and pinky, bluey, greeny, and yellowy)
+	// TODO: Add fruit objects in addition to cherry (Fruit parent object, cherry, banana, melon)
 	this.world = [
 		[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
 		[4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4],
@@ -57,7 +59,11 @@ const PacWorld = function(){
 	this.setScore = function(value){
 		this.score += value;
 	}
+	// TODO: Add Inertia functions for cherry(and other fruits) and pacman
 
+	// TODO: Add ghost position, inertia and drawing functions
+
+	//Drawing functions
 	this.draw_cherry = function(){
 		let c = this.cherry
 		$('#cherry').css({top: (c.y*20)+"px", left: (c.x*20)+"px"})
